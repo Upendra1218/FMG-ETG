@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ProvidioTestcases">
+
+  <!--  <listeners>
+		<listener class-name="com.providio.ExtentReports.ExtentReporterNG" />
+	</listeners> -->
+  <test thread-count="5" name="Automation">
+  
+    <packages>	
+  							
+  			
+  					
+  					<package name="com.GuestUserWith_GcAndCC"></package> 
+			 		<package name="com.GuestUserWith_CreditCard"></package>
+  	 	  			<package name="com.GuestUserWith_GiftCard"></package>
+
+  			 		<package name="com.GuestUserWith_Minicart_Paypal"></package>
+  					<package name="com.GuestUserWith_ViewCart_Paypal"></package>
+  					<package name="com.GuestUserWith_Checkout_Paypal"></package>
+  					<package name="com.GuestUserWith_GcAndPaypal"></package>
+  					
+  </packages>
+  
+  </test>
+  
+ 
+</suite> <!-- ProvidioTestcases -->
+

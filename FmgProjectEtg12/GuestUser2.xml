@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ProvidioTestcases">
+
+  <!--  <listeners>
+		<listener class-name="com.providio.ExtentReports.ExtentReporterNG" />
+	</listeners> -->
+	
+  <test thread-count="5" name="Automation" preserve-order="true">
+  
+    <classes>  
+		
+		   
+ <!-- login  --> 
+    	<class name= "com.providio.login.tc__Login" />   
+    	
+  <!-- credit card -->
+  
+	
+		
+	
+	
+			<class name= "com.RegUserWith_CreditCard.tc__BundleProductRegUser_InCC" />     
+			
+				<class name= "com.RegUserWith_CreditCard.tc__Bundle_GcAndAllPromotions_Reg_InCC" />	         
+  <!--  logout-->      
+    	
+    	<class name="com.providio.logout.tc__LogOut"/>
+	    	
+    </classes>
+   
+   </test> 
+</suite> <!-- ProvidioTestcases -->
+
