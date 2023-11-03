@@ -1,7 +1,7 @@
 package com.Login;
 
 import com.PageObjects.loginPage;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,7 +21,12 @@ public class tc__LoginSc extends baseClass {
         logger.info("Opened browser");
         Thread.sleep(2000L);
         loginPage lp = new loginPage(driver);
-        lp.clickSign();
+        lp.hoverOnCreateloginAcc(driver);
+        logger.info("Hover on create and login account");
+        // Click on the "Sign In" button
+        lp.clickOnLogin();
+        logger.info("Clicked on Sign In");
+        Thread.sleep(2000L);
         logger.info("clicked on sign in");
         
         openBrowserandClickSignInButtonset = true;

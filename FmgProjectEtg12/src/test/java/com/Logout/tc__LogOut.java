@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 import com.PageObjects.homePage;
 import com.PageObjects.logOut;
 import com.PageObjects.profilePage;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
  
 

@@ -8,8 +8,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.PaymentProccess.CheckOutProcessByPayPal;
 import com.Scenarios.SearchingProduct;
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class tc__BySearchingProduct_Reg_InMC_Paypal extends baseClass {
 	 

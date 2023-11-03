@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.PageObjects.productListingPage;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class selectingFilterFromPlp extends baseClass{
 

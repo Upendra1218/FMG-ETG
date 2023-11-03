@@ -9,8 +9,7 @@ import org.testng.asserts.SoftAssert;
 import com.PaymentProccess.CreditCardPaymentProcess;
 import com.PaymentProccess.MinicartViewCartProcess;
 import com.Scenarios.SearchingProduct;
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class tc__BySearchingProduct_RegUser_InCC extends baseClass {
 	 

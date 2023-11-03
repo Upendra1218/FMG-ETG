@@ -7,7 +7,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class miniCartPage {
+import com.testcases.baseClass;
+
+public class miniCartPage extends baseClass{
 
     WebDriver lDriver;
 
@@ -18,14 +20,18 @@ public class miniCartPage {
     }
 
     // Element for Cart Button
-    @FindBy(xpath = "//div[@class='minicart']")
+    @FindBy(xpath = "//div[@class='minicart-total']")
     WebElement CartButton;
     // Method to click on the Cart Button
     public void howercartbutton(WebDriver driver) throws InterruptedException {
         // Create an Actions object to perform hover action
+    	test.info("vaidate the minicart Hovered");
+    	Thread.sleep(1000);
         Actions actions = new Actions(driver);
         actions.moveToElement(CartButton).perform();
         Thread.sleep(1000);
+        test.pass("Successfully the minicart is Hovered");
+        
     }
 
     // Element for Cart Button (JavaScript click)
@@ -44,13 +50,16 @@ public class miniCartPage {
 
     // Method to click on the View Cart Button
     public void clickviewCartButton(WebDriver driver) throws InterruptedException {
-        viewCartButton.click();
+    	test.info("vaidate the viewCart click");
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", viewCartButton);
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", viewCartButton);
+        test.pass("Successfully the Viewcart Clicked");
+        //viewCartButton.click();
         Thread.sleep(2000);
         if (viewCartButton.isDisplayed()) {
             // Scroll to the View Cart Button and then click it using JavaScript
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", viewCartButton);
-            js.executeScript("arguments[0].click();", viewCartButton);
+            viewCartButton.click();
         }
     }
 

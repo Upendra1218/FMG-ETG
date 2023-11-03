@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.Scenarios.menuSelction;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class CLPpage extends baseClass{
 
@@ -46,12 +46,16 @@ public class CLPpage extends baseClass{
 			        //js.executeScript("arguments[0].click();", clickClp);
 			      clickClp.click();
 			      Thread.sleep(2000);
+			      List<WebElement> noPlpPage = driver.findElements(By.xpath("//div[contains(@class,'zero-search-results')]"));
+			      if(noPlpPage.size()>0) {
+			    	  menuSelction.randommenu();
+			      }
 //		           WebElement pageTitle = driver.findElement(By.xpath("//h1[contains(@class, 'category-name')]"));
 //                   String pageTitleText = pageTitle.getText();
 //                   logger.info("menu of submenu title"+pageTitleText);
 			    }
 		    }else {
-		    	menuSelction.menusss();
+		    	menuSelction.randommenu();
 		    }
 		    
 		    

@@ -1,7 +1,8 @@
 package com.Launchingbrowser;
 
 import com.PageObjects.homePage;
-import com.providio.testcases.baseClass;
+import com.Validations.browserValidation;
+import com.testcases.baseClass;
 
 public class launchBrowsering extends baseClass{
 	
@@ -11,6 +12,8 @@ public class launchBrowsering extends baseClass{
 		 driver.get(baseURL);
 		 logger.info("Entered into url");
 		 logger.info("Placing the order as guest user");
+		 //validation
+		 browserValidation.validateBroweserlaunches();
 		 
 		 homePage hp = new homePage(driver);
 		 hp.clickconsentTracking();

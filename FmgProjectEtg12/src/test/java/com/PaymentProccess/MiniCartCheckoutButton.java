@@ -13,9 +13,9 @@ import com.PageObjects.checkOutPage;
 import com.PageObjects.guestUserLoginPage;
 import com.PageObjects.miniCartPage;
 import com.PageObjects.viewCartPage;
-import com.providio.Validations.CartPageValidation;
-import com.providio.Validations.miniCartAndCartValidation;
-import com.providio.testcases.baseClass;
+import com.Validations.CartPageValidation;
+import com.Validations.miniCartAndCartValidation;
+import com.testcases.baseClass;
 
 public class MiniCartCheckoutButton extends baseClass {
 

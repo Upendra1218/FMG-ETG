@@ -12,8 +12,8 @@ import com.PaymentProccess.CheckOutProcessByPayPal;
 import com.PaymentProccess.CreditCardPaymentProcess;
 import com.PaymentProccess.PaymentProccessByGC;
 import com.PaymentProccess.PaymentProccessByGC_CC_Paypal;
-import com.providio.Validations.Checkout_Validation;
-import com.providio.testcases.baseClass;
+import com.Validations.Checkout_Validation;
+import com.testcases.baseClass;
 
 public class Gc__CC_Paypal extends baseClass{
 

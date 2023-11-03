@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import com.PageObjects.checkOutPage;
 import com.PageObjects.miniCartPage;
 import com.PageObjects.viewCartPage;
+import com.Validations.miniCartAndCartValidation;
 import com.commonfunctionality.GuestCheckout;
 import com.commonfunctionality.allAddress;
-import com.providio.Validations.miniCartAndCartValidation;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class MinicartViewCartProcess extends baseClass {
 

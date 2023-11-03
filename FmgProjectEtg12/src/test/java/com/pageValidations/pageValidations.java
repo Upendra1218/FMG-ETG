@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 import com.Launchingbrowser.launchBrowsering;
 import com.PageObjects.navigationProcess;
-import com.providio.Validations.preValidationCheck;
-import com.providio.testcases.baseClass;
+import com.Validations.preValidationCheck;
+import com.testcases.baseClass;
 
 public class pageValidations extends baseClass{
 	@Test

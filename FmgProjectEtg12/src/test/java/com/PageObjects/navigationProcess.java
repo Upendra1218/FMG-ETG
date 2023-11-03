@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.Scenarios.menuSelction;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class navigationProcess extends baseClass {
     WebDriver lDriver;
@@ -16,13 +16,9 @@ public class navigationProcess extends baseClass {
 
  
     public void selectRandomMenu(WebDriver driver) throws InterruptedException {
-    	
-    		menuSelction.menusss();
-    	
+    		menuSelction.randommenu();
         }
-        
-
-        
+                
     }
     
     

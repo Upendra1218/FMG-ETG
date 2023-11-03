@@ -10,10 +10,10 @@ import org.openqa.selenium.WebElement;
 import com.CreditCardPaymentMethods.allPaymentMethods;
 import com.PageObjects.paymentpPage;
 import com.PageObjects.reviewOrderPage;
+import com.Validations.Checkout_Validation;
+import com.Validations.preValidationCheck;
 import com.commonfunctionality.paymentMethods;
-import com.providio.Validations.Checkout_Validation;
-import com.providio.Validations.preValidationCheck;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 // Define a test class named "tc__CreditCardPaymentProcess"
 public class CreditCardPaymentProcess extends baseClass{
@@ -56,16 +56,14 @@ public class CreditCardPaymentProcess extends baseClass{
 				 // Review order page
 	    		reviewOrderPage rop = new reviewOrderPage(driver);
 	    		Thread.sleep(4000);			    		
-
+	    		
 	    		rop.clickonReviewOrder(driver);
 	    		logger.info("Clicked on review order button");
-	    		test.info("Clicked on review order button");
 	    		Thread.sleep(4000);		    		
 
 		    		
 	    		 rop.clickonplaceorderwithJsExuter(driver);
 	    		 logger.info("successfully click on the place order button by normal click");
-	    		 test.info("Clicked on place order button");
                 Thread.sleep(2000);
                 logger.info(driver.getTitle());
 				    
@@ -89,7 +87,7 @@ public class CreditCardPaymentProcess extends baseClass{
 		    		}
 				}
 		  }else {
-			  test.fail("Nex payment button is not enabled and clicked ");
+			  test.fail("Next payment button is not enabled and clicked ");
 		  }
 	}
  }//method

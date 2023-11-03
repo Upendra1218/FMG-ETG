@@ -7,8 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import com.PageObjects.homePage;
 import com.commonfunctionality.addtoCartValidation;
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class SearchingProduct extends baseClass{
 
@@ -24,15 +23,14 @@ public class SearchingProduct extends baseClass{
        homepage.clickOnSearchedProduct();
        test.info("clicked on searched product");
    
-		
-		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
-		 if( pdpPage.size()>0) {
-			   //validating the product is add to the cart
-			   addtoCartValidation.validatingProductisAddtoCart(driver);
-		 }
+       List<WebElement> pdpPagecheck = driver.findElements(By.xpath("//div[contains(@class,'product-main-block')]"));
+       if (pdpPagecheck.size() > 0) {
+   	    logger.info("PDP page is already loaded");
+   	    test.pass("PDP page is loaded successfully");
+   	    // Initialize and execute the PLP page scenario to add a product to the cart
+   	    pdpPage.addtoCartPDP();
+   	}
 		  
-	
-
 	}
 
 }

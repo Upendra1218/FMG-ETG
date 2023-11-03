@@ -8,7 +8,8 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import com.providio.testcases.baseClass;
+
+import com.testcases.baseClass;
 
 public class wishListPage extends baseClass {
 

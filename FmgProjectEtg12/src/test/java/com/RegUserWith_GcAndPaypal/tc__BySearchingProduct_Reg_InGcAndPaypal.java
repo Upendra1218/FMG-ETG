@@ -9,8 +9,7 @@ import org.testng.asserts.SoftAssert;
 import com.PaymentProccess.MinicartViewCartProcess;
 import com.Scenarios.SearchingProduct;
 import com.commonfunctionality.Gc__CC_Paypal;
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class tc__BySearchingProduct_Reg_InGcAndPaypal extends baseClass {
 	 

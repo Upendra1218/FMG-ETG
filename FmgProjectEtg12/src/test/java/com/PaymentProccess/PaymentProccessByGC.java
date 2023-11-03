@@ -21,8 +21,8 @@ import org.openqa.selenium.WebElement;
 
 import com.PageObjects.paymentpPage;
 import com.PageObjects.reviewOrderPage;
-import com.providio.Validations.Checkout_Validation;
-import com.providio.testcases.baseClass;
+import com.Validations.Checkout_Validation;
+import com.testcases.baseClass;
 
 public class PaymentProccessByGC extends baseClass{
 

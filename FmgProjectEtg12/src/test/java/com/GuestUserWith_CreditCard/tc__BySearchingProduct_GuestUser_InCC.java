@@ -5,43 +5,35 @@ package com.GuestUserWith_CreditCard;
 import com.Launchingbrowser.launchBrowsering;
 import com.PaymentProccess.CreditCardPaymentProcess;
 import com.PaymentProccess.MiniCartCheckoutButton;
+import com.PaymentProccess.MinicartViewCartProcess;
 import com.Scenarios.SearchingProduct;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
 	 
-	SoftAssert softAssert = new SoftAssert();
-
-	@Test//(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
-    public void bySearchingProduct() throws InterruptedException {
+	@Test
+    public void bySearchingProduct_GuestUser_InCC() throws InterruptedException {
 		
 		//launching the browser and passing the url into it
 		launchBrowsering lb = new launchBrowsering();
 		lb.chromeBrowser();
 			
-		
-	     
-	     
-		
         //searching a product 		
 		SearchingProduct sp1 = new SearchingProduct();
 		sp1.searchingProduct();
 
 
-		
-		
-	   //validating the product is add to the cart
-       //addtoCartValidation.validatingProductisAddtoCart(driver);
-	        
-       //checkoutProcess	        
-		MiniCartCheckoutButton cp = new MiniCartCheckoutButton();            
-        cp.checkoutprocess();
-        
-        //payment by credit card
-	     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();	     
-	     cc.paymentByCreditCard();
+		// Initialize MinicartViewCartProcess to perform the checkout process
+        MinicartViewCartProcess cartProcess = new MinicartViewCartProcess();
+        // Perform the checkout process
+        cartProcess.checkoutprocess();
+
+        // Initialize CreditCardPaymentProcess to perform the payment using a credit card
+        CreditCardPaymentProcess ccPaymentProcess = new CreditCardPaymentProcess();
+        // Perform the payment using a credit card
+        ccPaymentProcess.paymentByCreditCard();
     }
 }

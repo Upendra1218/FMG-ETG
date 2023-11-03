@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class viewCartPage extends baseClass {
 	
@@ -24,9 +24,11 @@ WebDriver lDriver;
 	//Checkout :- 
 	@FindBy(xpath="//a[contains(text(),'Checkout')]")
 	WebElement Checkout;	
-	public void clickCheckout(WebDriver driver) throws InterruptedException{		
+	public void clickCheckout(WebDriver driver) throws InterruptedException{
+		test.info("Validate check out Btn ViewCart page");
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
-		js.executeScript("arguments[0].click();", Checkout);		
+		js.executeScript("arguments[0].click();", Checkout);	
+		test.pass("Successfully Checkout Btn is Clicked");
         Thread.sleep(5000);
 	}
 	

@@ -5,8 +5,7 @@ package com.RegUserWith_GcAndCC;
 import com.PaymentProccess.MinicartViewCartProcess;
 import com.Scenarios.SearchingProduct;
 import com.commonfunctionality.Gc__CC_Paypal;
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

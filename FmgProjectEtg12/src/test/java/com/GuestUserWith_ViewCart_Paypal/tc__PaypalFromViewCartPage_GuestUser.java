@@ -5,9 +5,7 @@ import org.testng.annotations.Test;
 import com.Launchingbrowser.launchBrowsering;
 import com.PaymentProccess.CheckOutProcessByPayPal;
 import com.PaymentProccess.MinicartViewCartProcess;
-
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class tc__PaypalFromViewCartPage_GuestUser extends baseClass {
 	 

@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\UpendraReddy\AppData\Local\Temp\testng-eclipse-221814013\testng-customsuite.xml</span>
+                    <span>C:\Users\UpendraReddy\AppData\Local\Temp\testng-eclipse--2011887240\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc" class="method navigator-link" hash-for-method="guestLogin">guestLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal" class="method navigator-link" hash-for-method="bySearchingProduct_GuestUser_InCheckoutPaypal">bySearchingProduct_GuestUser_InCheckoutPaypal</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,23 +121,23 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc</span>
+              <span class="class-name">com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="guestLogin">
-                  </a> <!-- guestLogin -->
-                  <span class="method-name">guestLogin</span>
+                  <a name="bySearchingProduct_GuestUser_InCheckoutPaypal">
+                  </a> <!-- bySearchingProduct_GuestUser_InCheckoutPaypal -->
+                  <span class="method-name">bySearchingProduct_GuestUser_InCheckoutPaypal</span>
                   <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=118.0.5993.118)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [849a56dbee21a06bd3ae5ef371ee4978, clearElement {id=6176CEAA47EF932102F71A11596B4556_element_259}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\UPENDR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58015}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58015/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (849a56dbee21a06bd3ae5ef371ee4978)] -&gt; xpath: (//input[@name=&apos;quantity&apos;])[6]]
-Session ID: 849a56dbee21a06bd3ae5ef371ee4978
+Command: [c3bc6e3e3e2bbd41197914458d223c58, clickElement {id=CC6BD07BFF5F45CE3B5F88629B850BB6_element_382}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\UPENDR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57108/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c3bc6e3e3e2bbd41197914458d223c58)] -&gt; xpath: //button[contains(text(), &apos;Next: Review Order&apos;)]]
+Session ID: c3bc6e3e3e2bbd41197914458d223c58
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -151,10 +151,16 @@ Session ID: 849a56dbee21a06bd3ae5ef371ee4978
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
-	at com.PageObjects.productListingPage.addToCartFromPlp(productListingPage.java:59)
-	at com.Scenarios.plpPage.addtocartplp(plpPage.java:25)
-	at com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc.guestLogin(tc__GuestUserRandomProductFromPLP_InCc.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at com.PageObjects.reviewOrderPage.clickonReviewOrder(reviewOrderPage.java:30)
+	at com.PaymentProccess.CheckOutProcessByPayPal.checkoutprocessFromCheckout(CheckOutProcessByPayPal.java:134)
+	at com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal.bySearchingProduct_GuestUser_InCheckoutPaypal(tc__BySearchingProduct_GuestUser_InCheckoutPaypal.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -192,7 +198,7 @@ Session ID: 849a56dbee21a06bd3ae5ef371ee4978
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\UpendraReddy\AppData\Local\Temp\testng-eclipse-221814013\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\UpendraReddy\AppData\Local\Temp\testng-eclipse--2011887240\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -201,7 +207,7 @@ Session ID: 849a56dbee21a06bd3ae5ef371ee4978
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc&quot;/&gt;
+      &lt;class name=&quot;com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -243,14 +249,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'guestLogin')
-data.setCell(0, 2, 'com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc')
-data.setCell(0, 3, 49316);
+data.setCell(0, 1, 'bySearchingProduct_GuestUser_InCheckoutPaypal')
+data.setCell(0, 2, 'com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal')
+data.setCell(0, 3, 103738);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 49 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -276,28 +282,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUpforReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2654 ms</span>
+                <span class="method-start">5852 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">guestLogin</span>
-                <span class="method-start">4740 ms</span>
+                <span class="method-name">bySearchingProduct_GuestUser_InCheckoutPaypal</span>
+                <span class="method-start">7913 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=guestLogin status=FAILURE method=tc__GuestUserRandomProductFromPLP_InCc.guestLogin(...)</span>
-                <span class="method-start">54060 ms</span>
+                <span class="method-name">afterMethod([TestResult name=bySearchingProduct_GuestUser_InCheckoutPaypal status=FAILURE method=tc__BySearching...)</span>
+                <span class="method-start">111655 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">54487 ms</span>
+                <span class="method-start">111873 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

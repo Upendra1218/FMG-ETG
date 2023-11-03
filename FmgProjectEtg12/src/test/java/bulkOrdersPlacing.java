@@ -5,7 +5,7 @@ import com.PageObjects.navigationProcess;
 import com.PageObjects.productListingPage;
 import com.PaymentProccess.CreditCardPaymentProcess;
 import com.PaymentProccess.MinicartViewCartProcess;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class bulkOrdersPlacing extends baseClass{
 

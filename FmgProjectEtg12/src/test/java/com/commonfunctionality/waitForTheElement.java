@@ -11,7 +11,7 @@ public class waitForTheElement {
 	public static Wait<WebDriver> createFluentWait(WebDriver driver) {
         return new FluentWait<>(driver)
             .withTimeout(Duration.ofSeconds(30))
-            .pollingEvery(Duration.ofSeconds(1))
+            .pollingEvery(Duration.ofMillis(10))
             .ignoring(org.openqa.selenium.NoSuchElementException.class);
      
 }

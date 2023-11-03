@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class validatingInstock extends baseClass{
 

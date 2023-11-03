@@ -1,7 +1,7 @@
 package com.Scenarios;
 
 import com.PageObjects.GiftCertificate;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class giftCard extends baseClass{
 	

@@ -8,8 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.github.javafaker.Faker;
+import com.testcases.baseClass;
 
-public class checkOutPage {
+public class checkOutPage extends baseClass{
     WebDriver lDriver;
 	
     //pageFactory constructor for this page
@@ -149,10 +150,12 @@ public class checkOutPage {
 	@FindBy(xpath ="//button[contains(@class, 'submit-shipping')]")
 	WebElement continueToBillingButton ;
     public void clickcontinueToBillingButton (WebDriver driver) throws InterruptedException {
+    	test.info("Validate the ContinueBilling Btn click");
     	if(continueToBillingButton .isDisplayed()) {
 	        JavascriptExecutor js = (JavascriptExecutor) driver;
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", continueToBillingButton);
 	        js.executeScript("arguments[0].click();", continueToBillingButton);
+	        test.pass("Successfully ContinueBilling Btn is Clicked");
 	        Thread.sleep(5000);
     	}/*if(paymentbutton.isDisplayed()) {
     		paymentbutton.click();

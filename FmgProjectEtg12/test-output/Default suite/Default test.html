@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 02 12:17:45 IST 2023</td>
+<td>Started on:</td><td>Fri Nov 03 20:06:33 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>51 seconds (51825 ms)</td>
+<tr><td>Total time:</td><td>106 seconds (106012 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc.guestLogin()'><b>guestLogin</b><br>Test class: com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc</td>
+<td title='com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal.bySearchingProduct_GuestUser_InCheckoutPaypal()'><b>bySearchingProduct_GuestUser_InCheckoutPaypal</b><br>Test class: com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal</td>
 <td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=118.0.5993.118)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [849a56dbee21a06bd3ae5ef371ee4978, clearElement {id=6176CEAA47EF932102F71A11596B4556_element_259}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\UPENDR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58015}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58015/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (849a56dbee21a06bd3ae5ef371ee4978)] -&gt; xpath: (//input[@name=&apos;quantity&apos;])[6]]
-Session ID: 849a56dbee21a06bd3ae5ef371ee4978
+Command: [c3bc6e3e3e2bbd41197914458d223c58, clickElement {id=CC6BD07BFF5F45CE3B5F88629B850BB6_element_382}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\UPENDR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57108/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c3bc6e3e3e2bbd41197914458d223c58)] -&gt; xpath: //button[contains(text(), &apos;Next: Review Order&apos;)]]
+Session ID: c3bc6e3e3e2bbd41197914458d223c58
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -99,10 +99,16 @@ Session ID: 849a56dbee21a06bd3ae5ef371ee4978
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
-	at com.PageObjects.productListingPage.addToCartFromPlp(productListingPage.java:59)
-	at com.Scenarios.plpPage.addtocartplp(plpPage.java:25)
-	at com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc.guestLogin(tc__GuestUserRandomProductFromPLP_InCc.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at com.PageObjects.reviewOrderPage.clickonReviewOrder(reviewOrderPage.java:30)
+	at com.PaymentProccess.CheckOutProcessByPayPal.checkoutprocessFromCheckout(CheckOutProcessByPayPal.java:134)
+	at com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal.bySearchingProduct_GuestUser_InCheckoutPaypal(tc__BySearchingProduct_GuestUser_InCheckoutPaypal.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -131,16 +137,16 @@ Session ID: 849a56dbee21a06bd3ae5ef371ee4978
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1077138013", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1077138013'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+</pre></div><a href='#' onClick='toggleBox("stack-trace2121705071", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2121705071'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=118.0.5993.118)
 Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [849a56dbee21a06bd3ae5ef371ee4978, clearElement {id=6176CEAA47EF932102F71A11596B4556_element_259}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\UPENDR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58015}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58015/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (849a56dbee21a06bd3ae5ef371ee4978)] -&gt; xpath: (//input[@name=&apos;quantity&apos;])[6]]
-Session ID: 849a56dbee21a06bd3ae5ef371ee4978
+Command: [c3bc6e3e3e2bbd41197914458d223c58, clickElement {id=CC6BD07BFF5F45CE3B5F88629B850BB6_element_382}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\UPENDR~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57108/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c3bc6e3e3e2bbd41197914458d223c58)] -&gt; xpath: //button[contains(text(), &apos;Next: Review Order&apos;)]]
+Session ID: c3bc6e3e3e2bbd41197914458d223c58
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -154,10 +160,16 @@ Session ID: 849a56dbee21a06bd3ae5ef371ee4978
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
-	at com.PageObjects.productListingPage.addToCartFromPlp(productListingPage.java:59)
-	at com.Scenarios.plpPage.addtocartplp(plpPage.java:25)
-	at com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc.guestLogin(tc__GuestUserRandomProductFromPLP_InCc.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at com.PageObjects.reviewOrderPage.clickonReviewOrder(reviewOrderPage.java:30)
+	at com.PaymentProccess.CheckOutProcessByPayPal.checkoutprocessFromCheckout(CheckOutProcessByPayPal.java:134)
+	at com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal.bySearchingProduct_GuestUser_InCheckoutPaypal(tc__BySearchingProduct_GuestUser_InCheckoutPaypal.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -187,8 +199,8 @@ Session ID: 849a56dbee21a06bd3ae5ef371ee4978
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>49</td>
-<td>com.GuestUserWith_CreditCard.tc__GuestUserRandomProductFromPLP_InCc@3fa7df1</td></tr>
+<td>103</td>
+<td>com.GuestUserWith_Checkout_Paypal.tc__BySearchingProduct_GuestUser_InCheckoutPaypal@59c04bee</td></tr>
 </table><p>
 </body>
 </html>

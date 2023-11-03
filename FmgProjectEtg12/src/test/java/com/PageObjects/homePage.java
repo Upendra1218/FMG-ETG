@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class homePage extends baseClass{
     WebDriver lDriver;
@@ -52,12 +52,11 @@ public class homePage extends baseClass{
 			searchBar.sendKeys(typeSomething);
 		}
 		//clicked on searched product
-		@FindBy(xpath = " (//span[@class='name'])[2]")
+		@FindBy(xpath = " //span[@class='name']")
 		WebElement searchProduct;
 		public void clickOnSearchedProduct() throws InterruptedException {
 			Thread.sleep(3000);
 			searchProduct.click();
-			
 		}
 
 		//getting a banner and slecect one
@@ -65,19 +64,21 @@ public class homePage extends baseClass{
 			List<WebElement> herobanners = driver.findElements(By.xpath("//div[@class='hero-banner']"));
 			int count = herobanners.size();
 		    logger.info(count);
-		    // Create a random number generator.
-		    Random random = new Random();
-		    // Generate a random index to select a top-level menu item.
-		    int herobannerRandNumber = random.nextInt(count) + 1;
-		    if(herobannerRandNumber>0){
-		    	WebElement clickHeroBanner = driver.findElement(By.xpath("(//div[@class='hero-banner'])[" + herobannerRandNumber + "]"));
-		        //clickClp.click();
-		        JavascriptExecutor js = (JavascriptExecutor) driver;
-		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickHeroBanner);
-		        Thread.sleep(2000);
-		        js.executeScript("arguments[0].click();", clickHeroBanner);
-		    }
-			
+		    	// Create a random number generator.
+			    Random random = new Random();
+			    // Generate a random index to select a top-level menu item.
+			    int herobannerRandNumber = random.nextInt(count) + 1;
+			    logger.info(herobannerRandNumber);
+			    if(herobannerRandNumber>0){
+			    	WebElement clickHeroBanner = driver.findElement(By.xpath("(//div[@class='hero-banner'])[" + herobannerRandNumber + "]"));
+			        //clickClp.click();
+			        JavascriptExecutor js = (JavascriptExecutor) driver;
+			        logger.info("coming here");
+			        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickHeroBanner);
+			        Thread.sleep(2000);
+			        clickHeroBanner.click();
+			        //js.executeScript("arguments[0].click();", clickHeroBanner);
+			    }
 		}
 		
 	  public void homepageClickClp() throws InterruptedException {

@@ -1,5 +1,3 @@
-
-
 package com.GuestUserWith_Checkout_Paypal;
 
 import org.testng.annotations.Test;
@@ -9,36 +7,32 @@ import com.Launchingbrowser.launchBrowsering;
 import com.PaymentProccess.CheckOutProcessByPayPal;
 import com.PaymentProccess.MinicartViewCartProcess;
 import com.Scenarios.SearchingProduct;
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class tc__BySearchingProduct_GuestUser_InCheckoutPaypal extends baseClass {
-	 
-	SoftAssert softAssert = new SoftAssert();
+    
+    // Create a SoftAssert object to perform soft assertions
+    SoftAssert softAssert = new SoftAssert();
 
-	@Test//(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
-    public void bySearchingProduct() throws InterruptedException {
+    @Test
+    public void bySearchingProduct_GuestUser_InCheckoutPaypal() throws InterruptedException {
+        
+        // Launch the browser and navigate to the URL
+        launchBrowsering lb = new launchBrowsering();
+        lb.chromeBrowser();
+        
+        // Search for a product
+        SearchingProduct sp1 = new SearchingProduct();
+        sp1.searchingProduct();
 
-		
-		//launching the browser and passing the url into it
-		launchBrowsering lb = new launchBrowsering();
-		lb.chromeBrowser();
-			
-		
-	    
-	    
-		
-        //searching a product 		
-		SearchingProduct sp = new SearchingProduct();
-		sp.searchingProduct();
+        // Initialize MinicartViewCartProcess to perform the checkout process
+        MinicartViewCartProcess cartProcess = new MinicartViewCartProcess();
+        // Perform the checkout process
+        cartProcess.checkoutprocess();
 
-		        
-       //checkoutProcess	        
-        MinicartViewCartProcess cp = new MinicartViewCartProcess();            
-        cp.checkoutprocess();
-                    
-	  //paypal process from checkout page
-		 CheckOutProcessByPayPal cpp = new CheckOutProcessByPayPal();
-		 cpp.checkoutprocessFromCheckout();
+        // Initialize CheckOutProcessByPayPal to perform the PayPal checkout process
+        CheckOutProcessByPayPal cpp = new CheckOutProcessByPayPal();
+        // Perform the PayPal checkout process
+        cpp.checkoutprocessFromCheckout();
     }
 }

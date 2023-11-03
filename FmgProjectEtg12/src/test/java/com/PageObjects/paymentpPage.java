@@ -16,9 +16,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.Validations.Checkout_Validation;
 import com.github.javafaker.Faker;
-import com.providio.Validations.Checkout_Validation;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class paymentpPage extends baseClass {
 	
@@ -123,180 +123,7 @@ WebDriver lDriver;
     	JavascriptExecutor js = (JavascriptExecutor) driver;
     	js.executeScript("arguments[0].click();", savebutton);	
     }
-    
-    
-    //Cybersource credit card Xpaths, actionMethods and passing the card details
-    
-    //CyberSource cardNumber
-    @FindBy(xpath ="//input[@id ='cardNumber']")
-    WebElement newCreditcard;
-    public void latestcardnumber(WebDriver driver) throws InterruptedException {	    	
-    	String[] cardNumbers = {
-   			 	 "4111 1111 1111 1111",
-		         "4242 4242 4242 4242",
-		        // "5555 5555 5555 4444",
-		       //  "5200 8282 8282 8210",
-		       //  "3714 4963 539 8431"
-               // Add more card numbers here
-           };
-
-   	// Generate a random index to select a card number
-       Random rand = new Random();
-       int randomIndex = rand.nextInt(cardNumbers.length);
-       // Send the randomly selected card number
-       newCreditcard.sendKeys(cardNumbers[randomIndex]);
-        Thread.sleep(2000);
-    }
-    //CyberSource exp month
-    @FindBy(xpath ="//select[@id ='expirationMonth']")
-    WebElement newExpmonth;
-    public void latestExpDate(WebDriver driver) throws InterruptedException {
-    	Select newcardselect = new Select(newExpmonth);
-        newcardselect.selectByIndex(9);
-        Thread.sleep(3000);
-
-    }
-    //CyberSource exp year
-    @FindBy(xpath ="//select[@id ='expirationYear']")
-    WebElement newExpYear;
-    public void latestExpYear(WebDriver driver) throws InterruptedException {	
-    	Select newcardselect = new Select(newExpYear);
-        newcardselect.selectByIndex(7);
-        Thread.sleep(3000);
-    }
-    //CyberSource cvv
-    @FindBy(xpath ="//input[@id ='securityCode']")
-    WebElement newSceuritycode;
-    public void latestSceuritycode(WebDriver driver) throws InterruptedException {	  
-        // Locate the security code element and send the generated code     
-        newSceuritycode.sendKeys("4567");
-        Thread.sleep(2000);
-    }
-    
-    //cybersource 
-  //CyberSource cvv
-    @FindBy(xpath ="//button[contains(@class,'add-payment')]")
-    WebElement AddpaymentBtn;
-    public void cyberAddpaymentBtn(WebDriver driver) throws InterruptedException {	  
-    	AddpaymentBtn.click();
-        Thread.sleep(2000);
-    }
-	
-    
-   //salesForce CreditCard xpaths, actionMethods and passing the details of the card
-    
-    //SalesForce credit cardName
-    @FindBy(xpath ="//input[@autocomplete='cc-number' and @inputmode='numeric']")
-    WebElement cardNumber;
-    public void cardNumber(WebDriver driver) throws InterruptedException {	
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card number input frame']")));
-        Thread.sleep(2000);
-        String[] cardNumbers = {
-
-        		"4111 1111 1111 1111",
- 		        "4242 4242 4242 4242",
- 		        "2223 0031 2200 3222",
- 		        "4000 0566 5566 5556",
- 		        "5555 5555 5555 4444",
- 		        "5200 8282 8282 8210",
- 		        "3714 4963 539 8431"
-
-                // Add more card numbers here
-            };
-
-    	// Generate a random index to select a card number
-        Random rand = new Random();
-        int randomIndex = rand.nextInt(cardNumbers.length);
-
-        // Send the randomly selected card number
-        cardNumber.sendKeys(cardNumbers[randomIndex]);
-        Thread.sleep(2000);
-        driver.switchTo().defaultContent();
-    }
-    
-    //SalesForce Exp Date
-    @FindBy(xpath ="//input[@autocomplete='cc-exp' and @inputmode='numeric']")
-    WebElement expiryDate;
-    public void expiryDate(WebDriver driver) throws InterruptedException {		    	
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure expiration date input frame']")));
-    	expiryDate.sendKeys("1225");
-        Thread.sleep(2000);
-        driver.switchTo().defaultContent();
-    }
-    //SalesFroce cvv
-    @FindBy(xpath ="//input[@autocomplete='cc-csc' and @inputmode='numeric']")
-    WebElement cvc;
-    public void cvc(WebDriver driver) throws InterruptedException {	  
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure CVC input frame']")));
-    	 cvc.sendKeys("123");
-        Thread.sleep(2000);
-        driver.switchTo().defaultContent();
-    }
-    
-    //Salesforce reg credit card button
-    @FindBy(xpath="//div[text()='Credit Card']")
-    WebElement creditCardBtn;
-    public void creditCard(WebDriver driver) {
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();", creditCardBtn);
-    	//creditCardBtn.click();
-    }
-    
-    
-    //Stripe credit card of xpaths, actionMethods and passing the card details
-    
-    //stripe  CardNumber
-    @FindBy(xpath="//input[@autocomplete='cc-number' and @inputmode='numeric']")
-    WebElement newCardNumber;
-    public void cardNum(WebDriver driver) {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
-        String[] cardNumbers = {
-
-        		"4111 1111 1111 1111",
- 		        "4242 4242 4242 4242",
- 		        "2223 0031 2200 3222",
- 		        "4000 0566 5566 5556",
- 		        "5555 5555 5555 4444",
- 		        "5200 8282 8282 8210",
- 		        "3714 4963 539 8431"
-
-                // Add more card numbers here
-            };
-
-    	// Generate a random index to select a card number
-        Random rand = new Random();
-        int randomIndex = rand.nextInt(cardNumbers.length);
-
-        // Send the randomly selected card number
-        newCardNumber.sendKeys(cardNumbers[randomIndex]);
-    	 driver.switchTo().defaultContent();
-    }
-    //stripe exp date
-    @FindBy(xpath="//input[@autocomplete='cc-exp' and @inputmode='numeric']")
-    WebElement expDate;
-    public void expDate(WebDriver driver) {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
-    	newCardNumber.sendKeys("11 33");
-    }
-    //stripe cvv
-    @FindBy(xpath="//input[@autocomplete='cc-csc' and @inputmode='numeric']")
-    WebElement cvv;
-    public void cvv(WebDriver driver) {
-    	newCardNumber.sendKeys("987");
-    }
-    //stripe postal code
-    @FindBy(name="postal")
-    WebElement postalCode;
-    public void postalCode() {
-    	newCardNumber.sendKeys("98777890044");
-    	driver.switchTo().defaultContent();
-    }
-    
+  
     
     //edit the customer details in the payament page
 	@FindBy(xpath = "//div[@class='card customer-summary']//button[contains(@class,'edit-button')]")
@@ -445,59 +272,29 @@ WebDriver lDriver;
     public void braintreePaypal(WebDriver driver) throws InterruptedException {
         // Create an instance of Actions class
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,100)", "");
-                      
         js.executeScript("arguments[0].click();", paypal);
         System.out.println("Clicked on paypal icon");
     }
     
     //After the paypal button click
     public void brainTreeAfterClick(WebDriver driver) throws InterruptedException {
-        WebElement parentDiv= driver.findElement(By.xpath("//a[contains(@class, 'paypal-tab active')]"));               
-        WebElement regPaypalCheckoutText=parentDiv.findElement(By.xpath("//label[contains(text(),'Select a PayPal account')]"));
-        if(regPaypalCheckoutText.isDisplayed()) {                	 
-       	  
-       	 
-        }else { 
+        WebElement paypalButton= driver.findElement(By.xpath("//li[@data-method-id='PayPal']"));               
+       
+       // if(paypalButton.isDisplayed()) {  
+        	// click on paypal radio button
+        	//paypalButton.click();  
             JavascriptExecutor js = (JavascriptExecutor) driver;  
             WebElement paypalCheckout=driver.findElement(By.xpath("//div[@class='js_braintree_paypal_billing_button']")); 
             if(paypalCheckout.isDisplayed()) {
-           	   js.executeScript("arguments[0].click();", paypalCheckout);                	
-               Thread.sleep(1000);
-	        	if(paypalCheckout.isDisplayed()) {
-	        		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  paypalCheckout);
-	        		paypalCheckout.click();
-	            }
-            }	                 
+            	//click on paypal checkout button 
+           	   //js.executeScript("arguments[0].click();", paypalCheckout);    
+            	paypalCheckout.click();
+            	logger.info("A click to Enter into paypal");	
+          //  }	                 
          }                 
    }
     
-   //SalesForce paypal payment page
-    public void salesforcePaypalCheckout(WebDriver driver) throws InterruptedException {
-        WebElement parentDiv= driver.findElement(By.xpath("//div[contains(@class,'sfpp-payment-method-header-paypal')]"));
-        Thread.sleep(4000);
-        WebElement paypalCheckout=parentDiv.findElement(By.xpath("//div[contains(text(),'Pay with PayPal')]"));
-        
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,700)", "");
-        js.executeScript("arguments[0].click();", paypalCheckout);
-       
-        Thread.sleep(3000);
-      
-        List<WebElement> salesforcePaypalCheckout=parentDiv.findElements(By.xpath("//div[contains(@class,'paypal-buttons-context-iframe paypal-buttons-label-paypal')]"));  
-        if(salesforcePaypalCheckout.size()>0) {
-            WebElement salesforcePaypalCheckout1=parentDiv.findElement(By.xpath("(//iframe[@title='PayPal'])[2]"));
-          if(salesforcePaypalCheckout1.isDisplayed()) {
-        	  	 Thread.sleep(3000);
-            	 salesforcePaypalCheckout1.click();
-            	 System.out.println("First click");
-          }if(salesforcePaypalCheckout1.isDisplayed()) {    
-              js.executeScript("arguments[0].click();", salesforcePaypalCheckout1);
-             
-          }
-            	
-        }
-    }
+
     
     //addpaymentbutton
     @FindBy(xpath ="//button[@class ='btn btn-block add-payment btn-outline-primary']")
@@ -542,7 +339,7 @@ WebDriver lDriver;
     
     //paypal payment details
     
-    @FindBy(xpath = "//img[@alt='PayPal Credit']")
+    @FindBy(xpath = "//li[@data-method-id='PayPal']")
     WebElement paypal;
 
     @FindBy(xpath = "//div[@aria-label='PayPal Checkout']")
@@ -582,56 +379,55 @@ WebDriver lDriver;
                 break;
             }
         }
-        // test.info("Entered into paypal window");
-        //	List<WebElement> paypalPage = driver.findElements(By.id("headerText"));
-        //	System.out.println("The url for payapal is " + paypalPage.size());
-         Thread.sleep(3000);
+       
+         Thread.sleep(4000);
          if(emailLogin.size()>0) {
         	 WebElement  emailLogin1=driver.findElement(By.xpath("//input[@name='login_email']")); 
-        	 emailLogin1.clear();
-        	 emailLogin1.sendKeys("rahulnaik@etisbew.com");
-        	 test.info("Entered username");
+        	 if(emailLogin1.isDisplayed()) {
+	        	 emailLogin1.clear();
+	        	 emailLogin1.sendKeys("rahulnaik@etisbew.com");
+	        	 test.info("Entered username");
+        	 }
          }
          Thread.sleep(3000);
          if(nextButton.size()>0) {
         	 WebElement nextButton1=driver.findElement(By.cssSelector("#btnNext"));
-             nextButton1.click();
-             Thread.sleep(1000);
+        	 if(nextButton1.isDisplayed()) {
+	             nextButton1.click();
+	             Thread.sleep(1000);
+        	 }
          }
          if(password.size()>0) {
         	 WebElement password1=driver.findElement(By.xpath("//input[@id='password']"));
-        	// password1.clear();
-             password1.sendKeys("Etgsfcc245@");
-             test.info("Entered password");
-             Thread.sleep(1000);
+        	if(password1.isDisplayed()) {
+	             password1.sendKeys("Etgsfcc245@");
+	             test.info("Entered password");
+	             Thread.sleep(1000);
+        	}
          }
          if(loginbutton.size()>0) {
         	 WebElement loginbutton1=driver.findElement(By.xpath("//button[contains(text(), 'Log In')]"));
-             loginbutton1.click();
-             Thread.sleep(1000);
-         }
-        
-
-         Thread.sleep(2000);
-         if(reviewOrderButton.size()>0) {
-        	WebElement reviewOrder=driver.findElement(By.id("payment-submit-btn"));
-        	reviewOrder.click();
-        	Thread.sleep(7000);
-        /*	if(reviewOrderButton.size()>0 && reviewOrder.isDisplayed()) {
-        	      JavascriptExecutor js = (JavascriptExecutor) driver;                       
-                  js.executeScript("arguments[0].click();", reviewOrder);
-                 
-        	}*/
-        	//reviewOrder.click();
-        	                	
-         }else {
-        	 if(saveAndContinue.size()>0) {
-        		 WebElement saveAndContinue1=driver.findElement(By.xpath("//button[contains(text(), 'Save and Continue')]"));
-        		 saveAndContinue1.click();
+        	 if(loginbutton1.isDisplayed()) {
+	             loginbutton1.click();
+	             test.info("Clicked on login button");
+	             Thread.sleep(1000);
         	 }
-         }                 
+         }
+         Thread.sleep(2000);
+    	 if(saveAndContinue.size()>0) {
+    		 WebElement saveAndContinue1=driver.findElement(By.xpath("//button[contains(text(), 'Save and Continue')]"));
+    		 if(saveAndContinue1.isDisplayed()) {
+    			 JavascriptExecutor js = (JavascriptExecutor) driver;
+    			 Thread.sleep(1000);
+    		     js.executeScript("arguments[0].click();", saveAndContinue1);
+    			 test.info("Clicked on save and  continue");
+    			 Thread.sleep(5000);
+    		 }
+    	 }      
+    	 
          driver.switchTo().window(mainWindowHandle);
          Thread.sleep(1000);
+         logger.info("Clicked on paypal button");
          
       }          
 		    

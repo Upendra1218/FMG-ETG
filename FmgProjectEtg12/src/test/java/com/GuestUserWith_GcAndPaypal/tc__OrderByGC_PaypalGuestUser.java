@@ -5,9 +5,7 @@ import org.testng.annotations.Test;
 import com.Launchingbrowser.launchBrowsering;
 import com.PaymentProccess.MinicartViewCartProcess;
 import com.commonfunctionality.Gc__CC_Paypal;
-
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class tc__OrderByGC_PaypalGuestUser extends baseClass {
 	 

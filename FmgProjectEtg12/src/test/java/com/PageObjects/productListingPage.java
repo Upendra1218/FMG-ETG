@@ -11,9 +11,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import com.providio.Validations.navigationProcessWithValidation;
-import com.providio.Validations.validationpopupMessages;
-import com.providio.testcases.baseClass;
+import com.Validations.navigationProcessWithValidation;
+import com.Validations.validationpopupMessages;
+import com.testcases.baseClass;
 
 public class productListingPage extends baseClass{
 WebDriver lDriver;
@@ -29,12 +29,19 @@ WebDriver lDriver;
 	public void addToCartFromPlp() throws InterruptedException {
 	    // Find all color buttons that are enabled
 	    List<WebElement> addtoCartBtns = driver.findElements(By.xpath("//a[contains(@class, 'add-to-cart')]"));
+	    
+	    int displayedAddToCartCount = 0;
+	    for (WebElement item : addtoCartBtns) {
+	        if (item.isDisplayed()) {
+	        	displayedAddToCartCount++;
+	        }
+	    }
 
 	    // Define the maximum number of products to add
 	    int numberofProducts = 4;
 
 	    // Get the count of matched elements and log it.
-	    int count = addtoCartBtns.size();
+	    int count = displayedAddToCartCount;
 	    logger.info("Total add to cart buttons: " + count);
 
 	    // Create a random number generator.
@@ -54,23 +61,52 @@ WebDriver lDriver;
 	            // Find the WebElement based on the random index and click it.
 	            WebElement clickAddtoCartBtn = driver.findElement(By.xpath("(//a[contains(@class, 'add-to-cart')])[" + randomNumberAddtoCartBtn + "]"));
 
-	            // Find the quantity input field associated with the clicked button and set the quantity.
-	            WebElement inctheQuantity = driver.findElement(By.xpath("(//input[@name='quantity'])[" + randomNumberAddtoCartBtn + "]"));
-	            inctheQuantity.clear();
-	            inctheQuantity.sendKeys("5");
-
+//	            // Find the quantity input field associated with the clicked button and set the quantity.
+//	            WebElement inctheQuantity = driver.findElement(By.xpath("(//input[@name='quantity'])[" + randomNumberAddtoCartBtn + "]"));
+//	            Thread.sleep(2000);
+//	            inctheQuantity.clear();
+//	            Thread.sleep(2000);
+//	            inctheQuantity.sendKeys("5");
 	            // Scroll to the "Add to Cart" button and click it.
 	            JavascriptExecutor js = (JavascriptExecutor) driver;
-	            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickAddtoCartBtn);
+	         // Use JavaScript to scroll the element into the middle of the page view
+	            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", clickAddtoCartBtn);
 	            Thread.sleep(1000);
 	            js.executeScript("arguments[0].click();", clickAddtoCartBtn);
+	            
+	            //clickAddtoCartBtn.click();
 
 	            // Validate that the product is added to the cart
 	            validationpopupMessages.validatingProductisAddtoCart(driver);
 	        }
 	   // }
 	}
-
+	
+	
+	//getting a banner and slecect one
+			public void selectHeroBanner() throws InterruptedException {
+				List<WebElement> herobanners = driver.findElements(By.xpath("//div[@class='hero-banner']"));
+				int count = herobanners.size();
+			    logger.info(count);
+			    if(count==7) {
+			    	count = count-1;
+			    	// Create a random number generator.
+				    Random random = new Random();
+				    // Generate a random index to select a top-level menu item. random.nextInt(count) + 1
+				    int herobannerRandNumber =random.nextInt(count) + 1;
+				    logger.info(herobannerRandNumber);
+				    if(herobannerRandNumber>0){
+				    	WebElement clickHeroBanner = driver.findElement(By.xpath("(//div[@class='hero-banner'])[" + herobannerRandNumber + "]"));
+				        //clickClp.click();
+				        JavascriptExecutor js = (JavascriptExecutor) driver;
+				        logger.info("coming here");
+				        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickHeroBanner);
+				        Thread.sleep(2000);
+				        clickHeroBanner.click();
+				        //js.executeScript("arguments[0].click();", clickHeroBanner);
+				    }
+			    }
+			}
 	
 	//qunatity
 	
@@ -401,6 +437,7 @@ WebDriver lDriver;
 				WebElement wishlistPlp = driver.findElement(By.xpath("(//a[@title= 'Favorites'])["+i+"]"));
 				Thread.sleep(4000);
 				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", wishlistPlp);
 				executor.executeScript("arguments[0].click();", wishlistPlp);
 				
 				//wishlistPlp.click();
@@ -408,7 +445,7 @@ WebDriver lDriver;
 		}
 		
 		
-		public void selectRandomProduct() {
+		public static void selectRandomProduct() {
 			 // Create a new Random object
 	        Random random = new Random();
 	        

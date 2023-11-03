@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.PageObjects.guestUserLoginPage;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class GuestCheckout extends baseClass{
 	
@@ -17,10 +17,10 @@ public class GuestCheckout extends baseClass{
         logger.info(continueasAGuest.size());
 
         if (continueasAGuest.size() > 0) {
+        	test.info("Validate Guest checkout");
             guestUserLoginPage guestLoginPage = new guestUserLoginPage(driver);
             //guestLoginPage.clickOnGuestCheckOut();
             logger.info("Guest checkout");
-            
             
             int count = 100;
             Random random = new Random();
@@ -28,11 +28,12 @@ public class GuestCheckout extends baseClass{
             String Email = "Testing"+randomNumber+"@Etggs.com";
             WebElement mail = driver.findElement(By.xpath("//input[@id='email-guest']"));
             mail.sendKeys(Email);
-            
+            test.pass("Successfully mail is entered");
             //guestLoginPage.clickOnEmail(reEnterMail);
             logger.info("Guest mail again");
             guestLoginPage.clickOnContinueAsGuest();
             logger.info("Guest continue as guest");
+            test.pass("Successfully Clikced on the ContinueasGuest Btn");
             Thread.sleep(5000L);
           
         }

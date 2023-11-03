@@ -3,33 +3,35 @@ package com.GuestUserWith_CreditCard;
 import org.testng.annotations.Test;
 
 import com.Launchingbrowser.launchBrowsering;
-import com.PageObjects.GiftCertificate;
 import com.PageObjects.navigationProcess;
-import com.PaymentProccess.CheckOutProcessByPayPal;
+import com.PageObjects.productListingPage;
 import com.PaymentProccess.CreditCardPaymentProcess;
 import com.PaymentProccess.MinicartViewCartProcess;
-import com.Scenarios.giftCard;
 import com.Scenarios.pdpPage;
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
-public class tc__GuestUserRandomProductFromPDP_InCc extends baseClass{
-	int minicartCountValue ;
-	@Test
-	public void ProductFromPDP() throws InterruptedException {
-		
-		//launching the browser and passing the url into it
-		launchBrowsering lb = new launchBrowsering();
-		lb.chromeBrowser();
-		 
-		pdpPage.addtoCartPDP();
+public class tc__GuestUserRandomProductFromPDP_InCc extends baseClass {
+    int minicartCountValue;
+    
+    @Test
+    public void ProductFromPDP() throws InterruptedException {
+        // Launch the browser and navigate to the URL
+        launchBrowsering lb = new launchBrowsering();
+        lb.chromeBrowser();
         
-		
-		 //checkoutProcess
-		 MinicartViewCartProcess cp = new MinicartViewCartProcess();				     
-	     cp.checkoutprocess();
-			     
-	     //Payment process		     
-	     CreditCardPaymentProcess cc = new CreditCardPaymentProcess();			     
-	     cc.paymentByCreditCard();
-	}
+        // Execute the scenario to add a product to the cart from the PDP (Product Detail Page)
+        pdpPage.addtoCartPDP();
+
+        // Initialize MinicartViewCartProcess to perform the checkout process
+        MinicartViewCartProcess cartProcess = new MinicartViewCartProcess();
+        
+        // Perform the checkout process
+        cartProcess.checkoutprocess();
+
+        // Initialize CreditCardPaymentProcess to perform the payment using a credit card
+        CreditCardPaymentProcess ccPaymentProcess = new CreditCardPaymentProcess();
+        
+        // Perform the payment using a credit card
+        ccPaymentProcess.paymentByCreditCard();
+    }
 }

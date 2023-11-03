@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 public class addtoCartValidation extends baseClass{
 	

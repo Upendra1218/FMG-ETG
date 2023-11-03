@@ -4,8 +4,7 @@ package com.RegUserWith_ViewCart_Paypal;
 
 import com.PaymentProccess.CheckOutProcessByPayPal;
 import com.Scenarios.SearchingProduct;
-
-import com.providio.testcases.baseClass;
+import com.testcases.baseClass;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
